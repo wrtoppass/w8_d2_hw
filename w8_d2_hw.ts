@@ -55,6 +55,11 @@ class Sword implements Attackable{
         console.log('Swings a sword')
     }
 }
+class Axe implements Attackable{
+    attack(){
+        console.log('Hacks with axe')
+    }
+}
 class Armor implements Defendable{
     defend(){
         console.log('Armor is taking damage')
@@ -87,20 +92,27 @@ class Archer extends Character{
     attackAbility$=new Bow()
     defenseAbility$=new Tunic()
 }
+class Viking extends Character{
+    attackAbility$=new Axe()
+    defenseAbility$=new Tunic()
+}
 
 let bigboi=new Ogre()
 bigboi.attack()
 bigboi.defend()
 
-let paladin=new Ogre()
+let paladin=new Knight()
 paladin.attack()
 paladin.defend()
 
-let serf=new Ogre()
+let serf=new Peon()
 serf.attack()
 serf.defend()
 
-let forestelf=new Ogre()
+let forestelf=new Archer()
 forestelf.attack()
 forestelf.defend()
 
+let barbarian=new Viking()
+forestelf.attack()
+forestelf.defend()
